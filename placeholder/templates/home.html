@@ -1,0 +1,21 @@
+{% load staticfiles  %}
+<html>
+  <head>
+    <title>Placeholder de Imagens com Django</title>
+    <link rel='stylesheet' href="{% static 'site.css'  %}" type="text/css">
+  </head>
+  <body>
+    <h1>Placeholder de Imagens</h1>
+    <p>Este servidor pode ser usado como placeholder de imagens para qualquer website</p>
+    <p>Para requisitar uma imagem de placeholder voce deve colocar o source com altura e largura em seu site como: </p>
+    <pre>
+    &alt;img src="{{ example  }}" &gt;
+    </pre>
+    <h2>Examples</h2>
+    <ul>
+      <li><img src="{% url 'placeholder' width=50 height=50  %}" ></li>
+      <li><img src="{% url 'placeholder' width=100 height=50  %}" ></li>
+      <li><img src="{% url 'placeholder' width=50 height=100  %}" ></li>
+    </ul>
+  </body>
+</html>
